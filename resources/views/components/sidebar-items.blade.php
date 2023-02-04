@@ -5,4 +5,10 @@
             Main
         </p>
     </a>
+    <a href="{{route('contact.create')}}" class="nav-link">
+        <i class="nav-icon fas fa-th"></i>
+        <p>
+            Contact
+        </p>
+    </a>
 </li>

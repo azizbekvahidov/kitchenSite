@@ -19,3 +19,8 @@ Route::get('/', function () {
 });
 
 Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
+
+Route::prefix('contacts')->name('contact.')->group(function (){
+    Route::get('', [\App\Http\Controllers\ContactController::class, 'create'])->name('create');
+    Route::post('', [\App\Http\Controllers\ContactController::class, 'store'])->name('store');
+});
