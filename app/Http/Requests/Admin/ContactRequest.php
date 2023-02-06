@@ -24,25 +24,25 @@ class ContactRequest extends FormRequest
     public function rules()
     {
         return [
-            'site_name' => 'required|string|max:100',
-            'address' => 'required|string|max:100',
-            'phone' => 'required|string|max:100',
-            'email' => 'required|email|max:100',
-            'map_link' => 'required|string|max:100',
-            'facebook' => 'nullable|string|max:100',
-            'instagram' => 'nullable|string|max:100',
-            'telegram' => 'nullable|string|max:100',
+            'site_name' => 'required|string|max:255',
+            'address' => 'required|string|max:255',
+            'phone' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'map_link' => 'required|url|max:255',
+            'facebook' => 'nullable|url|max:255',
+            'instagram' => 'nullable|url|max:255',
+            'telegram' => 'nullable|url|max:255',
         ];
     }
 
     public function messages()
     {
         return [
-            'site_name.required' => 'это поле нужно заполнить',
-            'address.required' => 'это поле нужно заполнить',
-            'phone.required' => 'это поле нужно заполнить',
-            'email.required' => 'это поле нужно заполнить',
-            'map_link.required' => 'это поле нужно заполнить',
+            'site_name.required' => 'Это поле нужно заполнить',
+            'address.required' => 'Это поле нужно заполнить',
+            'phone.required' => 'Это поле нужно заполнить',
+            'email.required' => 'Это поле нужно заполнить',
+            'map_link.required' => 'Это поле нужно заполнить',
         ];
     }
 }

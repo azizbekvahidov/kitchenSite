@@ -18,9 +18,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
 
-Route::prefix('contacts')->name('contact.')->group(function (){
-    Route::get('', [\App\Http\Controllers\ContactController::class, 'create'])->name('create');
-    Route::post('', [\App\Http\Controllers\ContactController::class, 'store'])->name('store');
+Route::prefix('dashboard')->name('dashboard.')->group(function (){
+    Route::get('', [DashboardController::class, 'index'])->name('index');
+
+    Route::prefix('contacts')->name('contact.')->group(function (){
+        Route::get('', [\App\Http\Controllers\ContactController::class, 'edit'])->name('edit');
+        Route::post('', [\App\Http\Controllers\ContactController::class, 'update'])->name('update');
+    });
 });
+

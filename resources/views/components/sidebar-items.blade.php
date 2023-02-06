@@ -5,7 +5,9 @@
             Main
         </p>
     </a>
-    <a href="{{route('contact.create')}}" class="nav-link">
+</li>
+<li class="nav-item">
+    <a href="{{route('dashboard.contact.edit')}}" class="nav-link">
         <i class="nav-icon fas fa-th"></i>
         <p>
             Contact
