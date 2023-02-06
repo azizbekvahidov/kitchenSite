@@ -18,8 +18,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
+Route::middleware('auth')->group(function () {
+    Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
+});
 
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('login', [\App\Http\Controllers\Auth\LoginController::class, 'showLoginForm'])->name('login');
+Route::post('login', [\App\Http\Controllers\Auth\LoginController::class, 'login'])->name('login');
