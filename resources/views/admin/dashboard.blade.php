@@ -1,11 +1,11 @@
 @extends('layouts.admin')
 
 @section('content-header')
-    Dashboard
+    Админ панель
 @endsection
 
 @section('breadcrumb-items')
-    <li class="breadcrumb-item active">Dashboard</li>
+    <li class="breadcrumb-item active"></li>
 @endsection
 
 @section('content')
