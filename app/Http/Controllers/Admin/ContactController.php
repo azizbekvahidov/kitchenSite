@@ -1,13 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\ContactRequest;
 use App\Models\Contact;
-use Illuminate\Contracts\Foundation\Application;
-use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
-use Illuminate\Http\Request;
+use Illuminate\Http\RedirectResponse;
 
 class ContactController extends Controller
 {
@@ -16,9 +15,9 @@ class ContactController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return Application|Factory|View
+     * @return View
      */
-    public function edit(): View|Factory|Application
+    public function edit(): View
     {
         $contacts = Contact::query()->first();
         return view('admin.contacts', compact('contacts'));
@@ -27,10 +26,10 @@ class ContactController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\RedirectResponse
+     * @param  ContactRequest  $request
+     * @return RedirectResponse
      */
-    public function update(ContactRequest $request): \Illuminate\Http\RedirectResponse
+    public function update(ContactRequest $request): RedirectResponse
     {
 
         $validated = $request->validated();

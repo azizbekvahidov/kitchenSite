@@ -23,8 +23,8 @@ Route::prefix('dashboard')->name('dashboard.')->group(function (){
     Route::get('', [DashboardController::class, 'index'])->name('index');
 
     Route::prefix('contacts')->name('contact.')->group(function (){
-        Route::get('', [\App\Http\Controllers\ContactController::class, 'edit'])->name('edit');
-        Route::post('', [\App\Http\Controllers\ContactController::class, 'update'])->name('update');
+        Route::get('', [\App\Http\Controllers\Admin\ContactController::class, 'edit'])->name('edit');
+        Route::post('', [\App\Http\Controllers\Admin\ContactController::class, 'update'])->name('update');
     });
 });
 

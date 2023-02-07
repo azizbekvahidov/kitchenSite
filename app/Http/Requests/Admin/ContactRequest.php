@@ -42,7 +42,11 @@ class ContactRequest extends FormRequest
             'address.required' => 'Это поле нужно заполнить',
             'phone.required' => 'Это поле нужно заполнить',
             'email.required' => 'Это поле нужно заполнить',
+            'email.email' => 'Должно быть валидной почтой',
             'map_link.required' => 'Это поле нужно заполнить',
+            'facebook.url' => 'Должно быть валидной ссылкой',
+            'instagram.url' => 'Должно быть валидной ссылкой',
+            'telegram.url' => 'Должно быть валидной ссылкой',
         ];
     }
 }
