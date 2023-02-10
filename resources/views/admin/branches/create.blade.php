@@ -5,7 +5,10 @@
 @endsection
 
 @section('breadcrumb-items')
-    <li class="breadcrumb-item active">Филиал/Создать</li>
+    <li class="breadcrumb-item active">
+        <a href="{{ route('dashboard.branch.index') }}">Филиалы</a>
+    </li>
+    <li class="breadcrumb-item active">Создать</li>
 @endsection
 
 @section('content')

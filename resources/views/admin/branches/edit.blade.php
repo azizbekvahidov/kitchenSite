@@ -5,7 +5,11 @@
 @endsection
 
 @section('breadcrumb-items')
-    <li class="breadcrumb-item active">Филиал/Обновить</li>
+    <li class="breadcrumb-item">
+        <a href="{{ route('dashboard.branch.index') }}">Филиалы</a>
+    </li>
+    <li class="breadcrumb-item active">Редактирование</li>
+    <li class="breadcrumb-item active"> {{ $branch->name }} </li>
 @endsection
 
 @section('content')
