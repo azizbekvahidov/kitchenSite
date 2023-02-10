@@ -24,8 +24,12 @@ class ContactRequest extends FormRequest
     public function rules()
     {
         return [
-            'site_name' => 'required|string|max:255',
-            'address' => 'required|string|max:255',
+            'site_name_uz' => 'required|string|max:255',
+            'site_name_ru' => 'required|string|max:255',
+            'site_name_en' => 'required|string|max:255',
+            'address_uz' => 'required|string|max:255',
+            'address_ru' => 'required|string|max:255',
+            'address_en' => 'required|string|max:255',
             'phone' => 'required|string|max:255',
             'email' => 'required|email|max:255',
             'map_link' => 'required|url|max:255',
@@ -38,8 +42,12 @@ class ContactRequest extends FormRequest
     public function messages()
     {
         return [
-            'site_name.required' => 'Это поле нужно заполнить',
-            'address.required' => 'Это поле нужно заполнить',
+            'site_name_uz.required' => 'Ushbu maydonni to`ldirish kerak',
+            'site_name_ru.required' => 'Это поле нужно заполнить',
+            'site_name_en.required' => 'This field needs to be filled in',
+            'address_uz.required' => 'Ushbu maydonni to`ldirish kerak',
+            'address_ru.required' => 'Это поле нужно заполнить',
+            'address_en.required' => 'This field needs to be filled in',
             'phone.required' => 'Это поле нужно заполнить',
             'email.required' => 'Это поле нужно заполнить',
             'email.email' => 'Должно быть валидной почтой',

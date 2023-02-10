@@ -21,26 +21,70 @@
             <div class="card-body ">
 
                 <div class="row">
-                    <div class="form-group col-6">
-                        <label for="site_name">Название сайта</label>
+                    <div class="form-group col-4">
+                        <label for="site_name_uz">Название сайта_uz</label>
                         <input type="text"
-                               class="form-control @error('site_name') is-invalid @enderror"
-                               name="site_name"
-                               id="site_name"
-                               value="{{ old('site_name') ?? ($contacts ? $contacts->site_name : "") }}" >
-                        @error('site_name')
-                        <span id="site_name-error" class="error invalid-feedback">{{$message}}</span>
+                               class="form-control @error('site_name_uz') is-invalid @enderror"
+                               name="site_name_uz"
+                               id="site_name_uz"
+                               value="{{ old('site_name_uz') ?? ($contacts ? $contacts->site_name_uz : "") }}" >
+                        @error('site_name_uz')
+                        <span id="site_name_uz-error" class="error invalid-feedback">{{$message}}</span>
                         @enderror
                     </div>
-                    <div class="form-group col-6">
-                        <label for="address"> Адрес</label>
+                    <div class="form-group col-4">
+                        <label for="site_name_ru">Название сайта_ru</label>
                         <input type="text"
-                               class="form-control @error('address') is-invalid @enderror"
-                               name="address"
-                               id="address"
-                               value="{{ old('address') ?? ($contacts ? $contacts->address : "") }}" >
-                        @error('address')
-                        <span id="address-error" class="error invalid-feedback">{{$message}}</span>
+                               class="form-control @error('site_name_ru') is-invalid @enderror"
+                               name="site_name_ru"
+                               id="site_name_ru"
+                               value="{{ old('site_name_ru') ?? ($contacts ? $contacts->site_name_ru : "") }}" >
+                        @error('site_name_ru')
+                        <span id="site_name_ru-error" class="error invalid-feedback">{{$message}}</span>
+                        @enderror
+                    </div>
+                    <div class="form-group col-4">
+                        <label for="site_name_en">Название сайта_en</label>
+                        <input type="text"
+                               class="form-control @error('site_name_en') is-invalid @enderror"
+                               name="site_name_en"
+                               id="site_name_en"
+                               value="{{ old('site_name_en') ?? ($contacts ? $contacts->site_name_en : "") }}" >
+                        @error('site_name_en')
+                        <span id="site_name_en-error" class="error invalid-feedback">{{$message}}</span>
+                        @enderror
+                    </div>
+                    <div class="form-group col-4">
+                        <label for="address_uz"> Адрес_uz</label>
+                        <input type="text"
+                               class="form-control @error('address_uz') is-invalid @enderror"
+                               name="address_uz"
+                               id="address_uz"
+                               value="{{ old('address_uz') ?? ($contacts ? $contacts->address_uz : "") }}" >
+                        @error('address_uz')
+                        <span id="address_uz-error" class="error invalid-feedback">{{$message}}</span>
+                        @enderror
+                    </div>
+                    <div class="form-group col-4">
+                        <label for="address_ru"> Адрес_ru</label>
+                        <input type="text"
+                               class="form-control @error('address_ru') is-invalid @enderror"
+                               name="address_ru"
+                               id="address_ru"
+                               value="{{ old('address_ru') ?? ($contacts ? $contacts->address_ru : "") }}" >
+                        @error('address_ru')
+                        <span id="address_ru-error" class="error invalid-feedback">{{$message}}</span>
+                        @enderror
+                    </div>
+                    <div class="form-group col-4">
+                        <label for="address_en"> Адрес_en</label>
+                        <input type="text"
+                               class="form-control @error('address_en') is-invalid @enderror"
+                               name="address_en"
+                               id="address_en"
+                               value="{{ old('address_en') ?? ($contacts ? $contacts->address_en : "") }}" >
+                        @error('address_en')
+                        <span id="address_en-error" class="error invalid-feedback">{{$message}}</span>
                         @enderror
                     </div>
                     <div class="form-group col-6">

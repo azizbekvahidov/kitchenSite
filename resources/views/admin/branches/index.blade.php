@@ -18,9 +18,9 @@
                     <table class="table table-hover text-nowrap text-center">
                         <thead>
                         <tr>
-                            <th>ID</th>
-                            <th>Name</th>
-                            <th>Phone</th>
+                            <th>Айди</th>
+                            <th>Имя</th>
+                            <th>Телефон</th>
                             <th>
                                     <a href="{{route('dashboard.branch.create')}}"
                                        class="btn btn-block btn-primary btn-sm w-75">Создать</a>
@@ -31,7 +31,7 @@
                         @foreach($branches as $branch)
                             <tr>
                                 <td>{{$branch->id}}</td>
-                                <td>{{$branch->name}}</td>
+                                <td>{{$branch->name_uz}}</td>
                                 <td>{{$branch->phone}}</td>
                                 <td class="m-0">
                                     <div class="w-75 d-flex justify-content-between">

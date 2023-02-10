@@ -24,8 +24,12 @@ class StoreRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'=>'required|string|max:255',
-            'address'=>'required|string|max:255',
+            'name_uz'=>'required|string|max:255',
+            'name_ru'=>'required|string|max:255',
+            'name_en'=>'required|string|max:255',
+            'address_uz'=>'required|string|max:255',
+            'address_ru'=>'required|string|max:255',
+            'address_en'=>'required|string|max:255',
             'phone'=>'required|string|max:255',
         ];
     }
@@ -33,8 +37,12 @@ class StoreRequest extends FormRequest
     public function messages()
     {
         return [
-            'name.required' => 'Это поле нужно заполнить',
-            'address.required' => 'Это поле нужно заполнить',
+            'name_uz.required' => 'Ushbu maydonni to`ldirish kerak',
+            'name_ru.required' => 'Это поле нужно заполнить',
+            'name_en.required' => 'This field needs to be filled in',
+            'address_uz.required' => 'Ushbu maydonni to`ldirish kerak',
+            'address_ru.required' => 'Это поле нужно заполнить',
+            'address_en.required' => 'This field needs to be filled in',
             'phone.required' => 'Это поле нужно заполнить',
         ];
     }

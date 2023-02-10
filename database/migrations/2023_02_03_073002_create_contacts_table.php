@@ -15,8 +15,12 @@ return new class extends Migration
     {
         Schema::create('contacts', function (Blueprint $table) {
             $table->id();
-            $table->string('site_name');
-            $table->string('address');
+            $table->string('site_name_uz');
+            $table->string('site_name_ru');
+            $table->string('site_name_en');
+            $table->string('address_uz');
+            $table->string('address_ru');
+            $table->string('address_en');
             $table->string('phone');
             $table->string('email')->index()->unique();
             $table->string('map_link');
