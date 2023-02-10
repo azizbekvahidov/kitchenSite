@@ -1,8 +1,24 @@
 <li class="nav-item">
     <a href="{{route('dashboard.index')}}" class="nav-link">
-        <i class="nav-icon fas fa-th"></i>
+        <i class="far fa-circle nav-icon"></i>
         <p>
-            Main
+            Главная
+        </p>
+    </a>
+</li>
+<li class="nav-item">
+    <a href="{{route('dashboard.contact.edit')}}" class="nav-link">
+        <i class="far fa-circle nav-icon"></i>
+        <p>
+            Контакты
+        </p>
+    </a>
+</li>
+<li class="nav-item">
+    <a href="{{route('dashboard.branch.index')}}" class="nav-link">
+        <i class="far fa-circle nav-icon"></i>
+        <p>
+            Филиалы
         </p>
     </a>
 </li>
