@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('main-content')
-    <div class="login-box">
+    <div class="login-box" style="margin: 10% auto 0;">
 
         <div class="card card-outline card-primary">
             <div class="card-header text-center">
