@@ -46,7 +46,7 @@
             </div>
             <div class="form-group col-2 pl-0">
                 <a href="{{route('dashboard.branch.index')}}"
-                   class="btn btn-block btn-primary btn-lg">Назад</a>
+                   class="btn btn-block btn-primary">Назад</a>
             </div>
         </div>
 
