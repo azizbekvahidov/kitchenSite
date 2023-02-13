@@ -17,8 +17,12 @@ class BranchFactory extends Factory
     public function definition()
     {
         return [
-            'name'=>$this->faker->name,
-            'address'=>$this->faker->address,
+            'name_uz'=>$this->faker->name,
+            'name_ru'=>$this->faker->name,
+            'name_en'=>$this->faker->name,
+            'address_uz'=>$this->faker->address,
+            'address_ru'=>$this->faker->address,
+            'address_en'=>$this->faker->address,
             'phone'=>$this->faker->phoneNumber,
         ];
     }
