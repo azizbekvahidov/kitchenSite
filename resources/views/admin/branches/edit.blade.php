@@ -9,7 +9,7 @@
         <a href="{{ route('dashboard.branch.index') }}">Филиалы</a>
     </li>
     <li class="breadcrumb-item active">Редактирование</li>
-    <li class="breadcrumb-item active"> {{ $branch->name }} </li>
+    <li class="breadcrumb-item active"> {{ $branch->name_uz }} </li>
 @endsection
 
 @section('content')
@@ -19,22 +19,58 @@
         @method('Patch')
         <div class="card-body ">
             <div class="form-group row">
-               <div class="col-6">
-                   <label for="name">Имя</label>
-                   <input type="text" class="form-control @error('name') is-invalid @enderror"
-                          id="name" name="name"
-                          value="{{old('name') ?? $branch->name}}">
-                   @error('name')
-                   <span id="name-error" class="error invalid-feedback">{{$message}}</span>
+               <div class="col-4">
+                   <label for="name_uz">Имя UZ</label>
+                   <input type="text" class="form-control @error('name_uz') is-invalid @enderror"
+                          id="name_uz" name="name_uz"
+                          value="{{old('name_ru') ?? $branch->name_uz}}">
+                   @error('name_uz')
+                   <span id="name_uz-error" class="error invalid-feedback">{{$message}}</span>
                    @enderror
                </div>
-                <div class="col-6">
-                    <label for="address">Адрес</label>
-                    <input type="text" class="form-control @error('address') is-invalid @enderror"
-                           id="address" name="address"
-                           value="{{old('address') ?? $branch->address}}">
-                    @error('address')
-                    <span id="address-error" class="error invalid-feedback">{{$message}}</span>
+                <div class="col-4">
+                    <label for="name_ru">Имя RU</label>
+                    <input type="text" class="form-control @error('name_ru') is-invalid @enderror"
+                           id="name_ru" name="name_ru"
+                           value="{{old('name_ru') ?? $branch->name_ru}}">
+                    @error('name_ru')
+                    <span id="name_ru-error" class="error invalid-feedback">{{$message}}</span>
+                    @enderror
+                </div>
+                <div class="col-4">
+                    <label for="name_en">Имя EN</label>
+                    <input type="text" class="form-control @error('name_en') is-invalid @enderror"
+                           id="name_en" name="name_en"
+                           value="{{old('name_en') ?? $branch->name_en}}">
+                    @error('name_en')
+                    <span id="name_en-error" class="error invalid-feedback">{{$message}}</span>
+                    @enderror
+                </div>
+                <div class="col-4">
+                    <label for="address_uz">Адрес UZ</label>
+                    <input type="text" class="form-control @error('address_uz') is-invalid @enderror"
+                           id="address_uz" name="address_uz"
+                           value="{{old('address_uz') ?? $branch->address_uz}}">
+                    @error('address_uz')
+                    <span id="address_uz-error" class="error invalid-feedback">{{$message}}</span>
+                    @enderror
+                </div>
+                <div class="col-4">
+                    <label for="address_ru">Адрес RU</label>
+                    <input type="text" class="form-control @error('address_ru') is-invalid @enderror"
+                           id="address_ru" name="address_ru"
+                           value="{{old('address_ru') ?? $branch->address_ru}}">
+                    @error('address_ru')
+                    <span id="address_ru-error" class="error invalid-feedback">{{$message}}</span>
+                    @enderror
+                </div>
+                <div class="col-4">
+                    <label for="address_en">Адрес EN</label>
+                    <input type="text" class="form-control @error('address_en') is-invalid @enderror"
+                           id="address_en" name="address_en"
+                           value="{{old('address_en') ?? $branch->address_en}}">
+                    @error('address_en')
+                    <span id="address_en-error" class="error invalid-feedback">{{$message}}</span>
                     @enderror
                 </div>
                 <div class="col-12">
