@@ -36,12 +36,12 @@ class UpdateRequest extends FormRequest
     public function messages()
     {
         return [
-            'name_uz.required' => 'Ushbu maydonni to`ldirish kerak',
+            'name_uz.required' => 'Это поле нужно заполнить',
             'name_ru.required' => 'Это поле нужно заполнить',
-            'name_en.required' => 'This field needs to be filled in',
-            'address_uz.required' => 'Ushbu maydonni to`ldirish kerak',
+            'name_en.required' => 'Это поле нужно заполнить',
+            'address_uz.required' => 'Это поле нужно заполнить',
             'address_ru.required' => 'Это поле нужно заполнить',
-            'address_en.required' => 'This field needs to be filled in',
+            'address_en.required' => 'Это поле нужно заполнить',
             'phone.required' => 'Это поле нужно заполнить',
         ];
     }

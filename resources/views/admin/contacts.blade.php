@@ -22,7 +22,7 @@
 
                 <div class="row">
                     <div class="form-group col-4">
-                        <label for="site_name_uz">Название сайта_uz</label>
+                        <label for="site_name_uz">Название сайта UZ</label>
                         <input type="text"
                                class="form-control @error('site_name_uz') is-invalid @enderror"
                                name="site_name_uz"
@@ -33,7 +33,7 @@
                         @enderror
                     </div>
                     <div class="form-group col-4">
-                        <label for="site_name_ru">Название сайта_ru</label>
+                        <label for="site_name_ru">Название сайта RU</label>
                         <input type="text"
                                class="form-control @error('site_name_ru') is-invalid @enderror"
                                name="site_name_ru"
@@ -44,7 +44,7 @@
                         @enderror
                     </div>
                     <div class="form-group col-4">
-                        <label for="site_name_en">Название сайта_en</label>
+                        <label for="site_name_en">Название сайта EN</label>
                         <input type="text"
                                class="form-control @error('site_name_en') is-invalid @enderror"
                                name="site_name_en"
@@ -55,7 +55,7 @@
                         @enderror
                     </div>
                     <div class="form-group col-4">
-                        <label for="address_uz"> Адрес_uz</label>
+                        <label for="address_uz"> Адрес UZ</label>
                         <input type="text"
                                class="form-control @error('address_uz') is-invalid @enderror"
                                name="address_uz"
@@ -66,7 +66,7 @@
                         @enderror
                     </div>
                     <div class="form-group col-4">
-                        <label for="address_ru"> Адрес_ru</label>
+                        <label for="address_ru"> Адрес RU</label>
                         <input type="text"
                                class="form-control @error('address_ru') is-invalid @enderror"
                                name="address_ru"
@@ -77,7 +77,7 @@
                         @enderror
                     </div>
                     <div class="form-group col-4">
-                        <label for="address_en"> Адрес_en</label>
+                        <label for="address_en"> Адрес EN</label>
                         <input type="text"
                                class="form-control @error('address_en') is-invalid @enderror"
                                name="address_en"

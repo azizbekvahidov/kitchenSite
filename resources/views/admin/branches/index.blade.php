@@ -18,7 +18,7 @@
                     <table class="table table-hover text-nowrap text-center">
                         <thead>
                         <tr>
-                            <th>Айди</th>
+                            <th>ID</th>
                             <th>Имя</th>
                             <th>Телефон</th>
                             <th>

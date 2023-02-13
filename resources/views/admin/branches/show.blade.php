@@ -9,85 +9,46 @@
         <a href="{{ route('dashboard.branch.index') }}">Филиалы</a>
     </li>
     <li class="breadcrumb-item active">{{$branch->name_uz}}</li>
-    <li class="breadcrumb-item active">{{$branch->name_ru}}</li>
-    <li class="breadcrumb-item active">{{$branch->name_en}}</li>
 @endsection
 
 @section('content')
-    <div class="row">
-        <div class="col-12">
-            <div class="card">
-                <div class="card-body table-responsive p-0">
-                    <table class="table table-hover text-nowrap text-center">
-                        <thead>
-                        <tr>
-                            <th>Id_uz</th>
-                            <th>Ism_uz</th>
-                            <th>Manzil_uz</th>
-                            <th>Telefon_uz</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>{{$branch->id}}</td>
-                                <td>{{$branch->name_uz}}</td>
-                                <td>{{$branch->address_uz}}</td>
-                                <td>{{$branch->phone}}</td>
-                            </tr>
-                        </tbody>
-                    </table>
+    <form>
+        <div class="card-body">
+            <div class="row">
+                <div class="form-group col-4">
+                    <label for="name_uz">Имя UZ</label>
+                    <input type="text" class="form-control" id="name_uz" value="{{$branch->name_uz}}">
+                </div>
+                <div class="form-group col-4">
+                    <<label for="name_ru">Имя RU</label>
+                    <input type="text" class="form-control" id="name_ru" value="{{$branch->name_ru}}">
+                </div>
+                <div class="form-group col-4">
+                    <label for="name_en">Имя EN</label>
+                    <input type="text" class="form-control" id="name_en" value="{{$branch->name_en}}">
+                </div>
+                <div class="form-group col-4">
+                    <label for="address_uz">Адрес UZ</label>
+                    <input type="text" class="form-control" id="address_uz" value="{{$branch->address_uz}}">
+                </div>
+                <div class="form-group col-4">
+                    <label for="address_ru">Адрес RU</label>
+                    <input type="text" class="form-control" id="address_ru" value="{{$branch->address_ru}}">
+                </div>
+                <div class="form-group col-4">
+                    <label for="address_en">Адрес EN</label>
+                    <input type="text" class="form-control" id="address_en" value="{{$branch->address_en}}">
+                </div>
+                <div class="form-group col-6">
+                    <label for="phone">Телефон</label>
+                    <input type="text" class="form-control border-0 " id="phone" value="{{$branch->phone}}">
                 </div>
             </div>
-            <div class="card">
-                <div class="card-body table-responsive p-0">
-                    <table class="table table-hover text-nowrap text-center">
-                        <thead>
-                        <tr>
-                            <th>Айди_ru</th>
-                            <th>Имя_ru</th>
-                            <th>Адрес_ru</th>
-                            <th>Телефон_ru</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>{{$branch->id}}</td>
-                            <td>{{$branch->name_ru}}</td>
-                            <td>{{$branch->address_ru}}</td>
-                            <td>{{$branch->phone}}</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-body table-responsive p-0">
-                    <table class="table table-hover text-nowrap text-center">
-                        <thead>
-                        <tr>
-                            <th>Id_en</th>
-                            <th>Name_en</th>
-                            <th>Address_en</th>
-                            <th>Phone_en</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>{{$branch->id}}</td>
-                            <td>{{$branch->name_en}}</td>
-                            <td>{{$branch->address_en}}</td>
-                            <td>{{$branch->phone}}</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <div class="w-25  float-right">
-                <div class="">
-                    <a href="{{route('dashboard.branch.index')}}"
-                       class="btn btn-block btn-primary btn-sm">Назад</a>
-                </div>
+            <div class="form-group col-2 pl-0">
+                <a href="{{route('dashboard.branch.index')}}"
+                   class="btn btn-block btn-primary btn-lg">Назад</a>
             </div>
         </div>
-    </div>
+
+    </form>
 @endsection
