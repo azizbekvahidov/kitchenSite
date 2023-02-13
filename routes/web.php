@@ -39,7 +39,7 @@ Route::middleware('auth')->group(function () {
             Route::delete('{branch}',[BranchController::class,'delete'])->whereNumber('branch')->name('delete');
         });
     });
-
+    Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 });
 
 Route::middleware('guest')->group(function () {
