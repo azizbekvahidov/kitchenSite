@@ -17,31 +17,31 @@
             <div class="row">
                 <div class="form-group col-4">
                     <label for="name_uz">Имя UZ</label>
-                    <input type="text" class="form-control" id="name_uz" value="{{$branch->name_uz}}">
+                    <input type="text" disabled class="form-control" id="name_uz" value="{{$branch->name_uz}}">
                 </div>
                 <div class="form-group col-4">
-                    <<label for="name_ru">Имя RU</label>
-                    <input type="text" class="form-control" id="name_ru" value="{{$branch->name_ru}}">
+                    <label for="name_ru">Имя RU</label>
+                    <input type="text" disabled class="form-control" id="name_ru" value="{{$branch->name_ru}}">
                 </div>
                 <div class="form-group col-4">
                     <label for="name_en">Имя EN</label>
-                    <input type="text" class="form-control" id="name_en" value="{{$branch->name_en}}">
+                    <input type="text" disabled class="form-control" id="name_en" value="{{$branch->name_en}}">
                 </div>
                 <div class="form-group col-4">
                     <label for="address_uz">Адрес UZ</label>
-                    <input type="text" class="form-control" id="address_uz" value="{{$branch->address_uz}}">
+                    <input type="text" disabled class="form-control" id="address_uz" value="{{$branch->address_uz}}">
                 </div>
                 <div class="form-group col-4">
                     <label for="address_ru">Адрес RU</label>
-                    <input type="text" class="form-control" id="address_ru" value="{{$branch->address_ru}}">
+                    <input type="text" disabled class="form-control" id="address_ru" value="{{$branch->address_ru}}">
                 </div>
                 <div class="form-group col-4">
                     <label for="address_en">Адрес EN</label>
-                    <input type="text" class="form-control" id="address_en" value="{{$branch->address_en}}">
+                    <input type="text" disabled class="form-control" id="address_en" value="{{$branch->address_en}}">
                 </div>
                 <div class="form-group col-6">
                     <label for="phone">Телефон</label>
-                    <input type="text" class="form-control border-0 " id="phone" value="{{$branch->phone}}">
+                    <input type="text" disabled class="form-control" id="phone" value="{{$branch->phone}}">
                 </div>
             </div>
             <div class="form-group col-2 pl-0">
