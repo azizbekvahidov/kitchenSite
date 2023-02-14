@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             ContactsSeeder::class,
             BranchSeeder::class,
+            MenuCategorySeeder::class,
         ]);
 
         if (!app()->environment('production'))

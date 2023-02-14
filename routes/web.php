@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\BranchController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\MenuCategoryController;
 use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Support\Facades\Route;
 
@@ -37,6 +38,15 @@ Route::middleware('auth')->group(function () {
             Route::get('{branch}/edit',[BranchController::class,'edit'])->whereNumber('branch')->name('edit');
             Route::patch('{branch}',[BranchController::class,'update'])->whereNumber('branch')->name('update');
             Route::delete('{branch}',[BranchController::class,'delete'])->whereNumber('branch')->name('delete');
+        });
+        Route::prefix('menu_categories')->name('menu_category.')->group(function (){
+            Route::get('', [MenuCategoryController::class, 'index'])->name('index');
+            Route::get('/create', [MenuCategoryController::class, 'create'])->name('create');
+            Route::get('{menu_category}', [MenuCategoryController::class, 'show'])->whereNumber('menu_category')->name('show');
+            Route::post('', [MenuCategoryController::class, 'store'])->name('store');
+            Route::get('{menu_category}/edit', [MenuCategoryController::class, 'edit'])->whereNumber('menu_category')->name('edit');
+            Route::patch('{menu_category}',[MenuCategoryController::class,'update'])->whereNumber('menu_category')->name('update');
+            Route::delete('{menu_category}',[MenuCategoryController::class,'delete'])->whereNumber('menu_category')->name('delete');
         });
     });
     Route::post('logout', [LoginController::class, 'logout'])->name('logout');
