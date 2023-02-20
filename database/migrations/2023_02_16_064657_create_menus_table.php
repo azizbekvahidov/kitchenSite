@@ -21,7 +21,7 @@ return new class extends Migration
             $table->text('description_uz')->nullable();
             $table->text('description_ru')->nullable();
             $table->text('description_en')->nullable();
-            $table->decimal('price')->nullable();
+            $table->decimal('price');
             $table->foreignId('menu_category_id');
             $table->timestamps();
         });

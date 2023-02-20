@@ -30,7 +30,7 @@ class StoreRequest extends FormRequest
             'description_uz' => 'required|string|max:255',
             'description_ru' => 'required|string|max:255',
             'description_en' => 'required|string|max:255',
-            'price' => 'required|numeric',
+            'price' => 'required|numeric|max:999999999',
             'menu_category_id' => 'required|integer|exists:menu_categories,id',
         ];
     }
