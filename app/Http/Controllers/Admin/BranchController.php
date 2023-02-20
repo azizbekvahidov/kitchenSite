@@ -93,7 +93,16 @@ class BranchController extends Controller
      */
     public function delete(Branch $branch): Redirector|RedirectResponse|Application
     {
+        $categories = $branch->menuCategories;
+
+        foreach ($categories as $category)
+        {
+            $category->menu()->delete();
+        }
+
+        $branch->menuCategories()->delete();
         $branch->delete();
+
         return redirect(route('dashboard.branch.index'));
     }
 }

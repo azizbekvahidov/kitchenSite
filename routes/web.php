@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\BranchController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\MenuCategoryController;
+use App\Http\Controllers\Admin\MenuController;
 use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Support\Facades\Route;
 
@@ -40,6 +41,7 @@ Route::middleware('auth')->group(function () {
             Route::delete('{branch}',[BranchController::class,'delete'])->whereNumber('branch')->name('delete');
         });
         Route::prefix('menu_categories')->name('menu_category.')->group(function (){
+            Route::get('list',[MenuCategoryController::class,'list'])->name('list');
             Route::get('', [MenuCategoryController::class, 'index'])->name('index');
             Route::get('/create', [MenuCategoryController::class, 'create'])->name('create');
             Route::get('{menu_category}', [MenuCategoryController::class, 'show'])->whereNumber('menu_category')->name('show');
@@ -47,6 +49,15 @@ Route::middleware('auth')->group(function () {
             Route::get('{menu_category}/edit', [MenuCategoryController::class, 'edit'])->whereNumber('menu_category')->name('edit');
             Route::patch('{menu_category}',[MenuCategoryController::class,'update'])->whereNumber('menu_category')->name('update');
             Route::delete('{menu_category}',[MenuCategoryController::class,'delete'])->whereNumber('menu_category')->name('delete');
+        });
+        Route::prefix('menus')->name('menu.')->group(function (){
+            Route::get('', [MenuController::class, 'index'])->name('index');
+            Route::get('/create', [MenuController::class, 'create'])->name('create');
+            Route::get('{menu}', [MenuController::class, 'show'])->whereNumber('menu')->name('show');
+            Route::post('', [MenuController::class, 'store'])->name('store');
+            Route::get('{menu}/edit',[MenuController::class,'edit'])->whereNumber('menu')->name('edit');
+            Route::patch('{menu}',[MenuController::class,'update'])->whereNumber('menu')->name('update');
+            Route::delete('{menu}', [MenuController::class, 'delete'])->whereNumber('menu')->name('delete');
         });
     });
     Route::post('logout', [LoginController::class, 'logout'])->name('logout');

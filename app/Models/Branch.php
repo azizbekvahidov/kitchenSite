@@ -11,4 +11,9 @@ class Branch extends Model
 
     protected $table = 'branches';
     protected $guarded = false;
+
+    public function menuCategories()
+    {
+        return $this->hasMany(MenuCategory::class);
+    }
 }
