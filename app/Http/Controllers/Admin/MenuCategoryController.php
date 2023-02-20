@@ -27,6 +27,13 @@ class MenuCategoryController extends Controller
         return view('admin.menu_categories.index',compact('menuCategories'));
     }
 
+    public function list(Request $request)
+    {
+        $branchId = $request->get('branch_id');
+        $menu_categories = MenuCategory::query()->where('branch_id', '=', $branchId)->get();
+        return response()->json($menu_categories);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -94,6 +101,7 @@ class MenuCategoryController extends Controller
      */
     public function delete(MenuCategory $menu_category): Redirector|RedirectResponse|Application
     {
+        $menu_category->menu()->delete();
         $menu_category->delete();
         return redirect(route('dashboard.menu_category.index'));
     }

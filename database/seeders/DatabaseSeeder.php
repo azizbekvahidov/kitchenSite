@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
             ContactsSeeder::class,
             BranchSeeder::class,
             MenuCategorySeeder::class,
+            MenuSeeder::class,
         ]);
 
         if (!app()->environment('production'))
