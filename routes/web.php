@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\BranchController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\HomePageSettingController;
 use App\Http\Controllers\Admin\MenuCategoryController;
 use App\Http\Controllers\Admin\MenuController;
 use App\Http\Controllers\Auth\LoginController;
@@ -58,6 +59,12 @@ Route::middleware('auth')->group(function () {
             Route::get('{menu}/edit',[MenuController::class,'edit'])->whereNumber('menu')->name('edit');
             Route::patch('{menu}',[MenuController::class,'update'])->whereNumber('menu')->name('update');
             Route::delete('{menu}', [MenuController::class, 'delete'])->whereNumber('menu')->name('delete');
+        });
+        Route::prefix('home_page_settings')->name('home_page_setting.')->group(function () {
+            Route::get('', [HomePageSettingController::class, 'edit'])->name('edit');
+            Route::post('', [HomePageSettingController::class, 'update'])->name('update');
+            Route::post('/upload', [HomePageSettingController::class, 'upload'])->name('upload');
+            Route::delete('{homePageMedia}',[HomePageSettingController::class,'delete'])->name('delete');
         });
     });
     Route::post('logout', [LoginController::class, 'logout'])->name('logout');

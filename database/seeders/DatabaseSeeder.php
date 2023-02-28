@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
             BranchSeeder::class,
             MenuCategorySeeder::class,
             MenuSeeder::class,
+            HomePageSettingSeeder::class,
         ]);
 
         if (!app()->environment('production'))

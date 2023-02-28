@@ -34,7 +34,7 @@ class StoreRequest extends FormRequest
         ];
     }
 
-    public function messages()
+    public function messages(): array
     {
         return [
             'name_uz.required' => 'Это поле нужно заполнить',
