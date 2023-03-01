@@ -44,7 +44,7 @@ class HomePageSettingController extends Controller
         return redirect(route('dashboard.home_page_setting.edit'));
     }
 
-    public function upload(HomePageMediaRequest $homePageSettingStoreRequest): Redirector|Application|RedirectResponse
+    public function uploadFile(HomePageMediaRequest $homePageSettingStoreRequest): Redirector|Application|RedirectResponse
     {
 
         foreach ($homePageSettingStoreRequest->file('media') as $image) {
@@ -67,7 +67,7 @@ class HomePageSettingController extends Controller
      * @param HomePageMedia $homePageMedia
      * @return Application|RedirectResponse|Redirector
      */
-    public function delete(HomePageMedia $homePageMedia): Redirector|RedirectResponse|Application
+    public function deleteFile(HomePageMedia $homePageMedia): Redirector|RedirectResponse|Application
     {
         Storage::disk('public')->delete($homePageMedia->path);
         $homePageMedia->delete();

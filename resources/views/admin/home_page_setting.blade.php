@@ -126,7 +126,7 @@
         </div>
         <!-- /.card-header -->
         <!-- form start -->
-        <form action="{{route('dashboard.home_page_setting.upload')}}" method="post" enctype="multipart/form-data">
+        <form action="{{route('dashboard.home_page_setting.uploadFile')}}" method="post" enctype="multipart/form-data">
             @csrf
             <div class="card-body ">
                 <div class="row">
@@ -171,7 +171,7 @@
                                 @else
                                     <img class="img-fluid" src="{{asset('/storage/' . $media->path)}}" alt="" style="height: 100px; width: 100px">
                                 @endif
-                                <form action="{{route('dashboard.home_page_setting.delete',$media->id)}}"
+                                <form action="{{route('dashboard.home_page_setting.deleteFile',$media->id)}}"
                                       method="post">
                                     @csrf
                                     @method('delete')
@@ -194,7 +194,7 @@
                                 @else
                                     <img class="img-fluid" src="{{asset('/storage/' . $media->path)}}" alt="" style="height: 100px; width: 100px">
                                 @endif
-                                <form action="{{route('dashboard.home_page_setting.delete',$media->id)}}"
+                                <form action="{{route('dashboard.home_page_setting.deleteFile',$media->id)}}"
                                       method="post">
                                     @csrf
                                     @method('delete')

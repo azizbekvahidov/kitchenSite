@@ -63,8 +63,8 @@ Route::middleware('auth')->group(function () {
         Route::prefix('home_page_settings')->name('home_page_setting.')->group(function () {
             Route::get('', [HomePageSettingController::class, 'edit'])->name('edit');
             Route::post('', [HomePageSettingController::class, 'update'])->name('update');
-            Route::post('/upload', [HomePageSettingController::class, 'upload'])->name('upload');
-            Route::delete('{homePageMedia}',[HomePageSettingController::class,'delete'])->name('delete');
+            Route::post('/upload', [HomePageSettingController::class, 'uploadFile'])->name('uploadFile');
+            Route::delete('{homePageMedia}',[HomePageSettingController::class,'deleteFile'])->name('deleteFile');
         });
     });
     Route::post('logout', [LoginController::class, 'logout'])->name('logout');
