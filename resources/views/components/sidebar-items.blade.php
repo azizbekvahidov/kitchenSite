@@ -38,3 +38,11 @@
         </p>
     </a>
 </li>
+<li class="nav-item">
+    <a href="{{route('dashboard.home_page_setting.edit')}}" class="nav-link">
+        <i class="far fa-circle nav-icon"></i>
+        <p>
+            Домашняя страница
+        </p>
+    </a>
+</li>

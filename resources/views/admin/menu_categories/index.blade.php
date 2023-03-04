@@ -57,6 +57,5 @@
                 </tbody>
             </table>
         </div>
-        <!-- /.card-body -->
     </div>
 @endsection
