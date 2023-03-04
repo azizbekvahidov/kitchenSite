@@ -12,9 +12,6 @@
 @endsection
 
 @section('content')
-    @foreach ($errors->all() as $message)
-    <div>{{$message}}</div>
-    @endforeach
     <form action="{{route('dashboard.event.update',$event->id)}}" method="post" enctype="multipart/form-data">
         @csrf
         @method('patch')
