@@ -23,6 +23,14 @@
     </a>
 </li>
 <li class="nav-item">
+    <a href="{{route('dashboard.menu.index')}}" class="nav-link">
+        <i class="far fa-circle nav-icon"></i>
+        <p>
+            Меню
+        </p>
+    </a>
+</li>
+<li class="nav-item">
     <a href="{{route('dashboard.menu_category.index')}}" class="nav-link">
         <i class="far fa-circle nav-icon"></i>
         <p>
@@ -31,10 +39,10 @@
     </a>
 </li>
 <li class="nav-item">
-    <a href="{{route('dashboard.menu.index')}}" class="nav-link">
+    <a href="{{route('dashboard.event.index')}}" class="nav-link">
         <i class="far fa-circle nav-icon"></i>
         <p>
-            Меню
+            Акции
         </p>
     </a>
 </li>
@@ -46,3 +54,4 @@
         </p>
     </a>
 </li>
+

@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\BranchController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\EventController;
 use App\Http\Controllers\Admin\HomePageSettingController;
 use App\Http\Controllers\Admin\MenuCategoryController;
 use App\Http\Controllers\Admin\MenuController;
@@ -65,6 +66,15 @@ Route::middleware('auth')->group(function () {
             Route::post('', [HomePageSettingController::class, 'update'])->name('update');
             Route::post('/upload', [HomePageSettingController::class, 'uploadFile'])->name('uploadFile');
             Route::delete('{homePageMedia}',[HomePageSettingController::class,'deleteFile'])->name('deleteFile');
+        });
+        Route::prefix('events')->name('event.')->group(function () {
+            Route::get('',[EventController::class,'index'])->name('index');
+            Route::get('/create',[EventController::class,'create'])->name('create');
+            Route::get('{event}', [EventController::class, 'show'])->whereNumber('event')->name('show');
+            Route::post('', [EventController::class, 'store'])->name('store');
+            Route::get('{event}/edit',[EventController::class,'edit'])->whereNumber('event')->name('edit');
+            Route::patch('{event}',[EventController::class,'update'])->whereNumber('event')->name('update');
+            Route::delete('{event}', [EventController::class, 'delete'])->whereNumber('event')->name('delete');
         });
     });
     Route::post('logout', [LoginController::class, 'logout'])->name('logout');
