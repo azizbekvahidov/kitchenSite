@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\HomePageSettingController;
 use App\Http\Controllers\Admin\MenuCategoryController;
 use App\Http\Controllers\Admin\MenuController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,6 +33,10 @@ Route::middleware('auth')->group(function () {
         Route::prefix('contacts')->name('contact.')->group(function (){
             Route::get('', [ContactController::class, 'edit'])->name('edit');
             Route::post('', [ContactController::class, 'update'])->name('update');
+        });
+        Route::prefix('profiles')->name('profile.')->group(function () {
+            Route::get('', [UserController::class, 'edit'])->name('edit');
+            Route::post('', [UserController::class, 'update'])->name('update');
         });
         Route::prefix('branches')->name('branch.')->group(function (){
             Route::get('',[BranchController::class,'index'])->name('index');
