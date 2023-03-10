@@ -32,7 +32,7 @@ class TokenRegenerate extends Command
         $user = User::query()->where('login', '=', 'admin')->first();
         $user->tokens()->delete();
         $token = $user->createToken('new token ')->plainTextToken;
-        $this->components->info('Ваш авторизованный пользователь ' .$token);
+        $this->components->info('Ваш токен: ' .$token);
         return Command::SUCCESS;
     }
 }
