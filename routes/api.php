@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\ContactController;
+use App\Http\Controllers\Api\EventController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -18,6 +19,9 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->group(function () {
     Route::prefix('contacts')->group(function () {
         Route::get('',[ContactController::class,'contact']);
+    });
+    Route::prefix('events')->group(function () {
+        Route::get('',[EventController::class,'event']);
     });
 });
 
