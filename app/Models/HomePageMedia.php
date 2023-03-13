@@ -11,4 +11,5 @@ class HomePageMedia extends Model
 
     protected $table = 'home_page_media';
     protected $guarded = false;
+
 }

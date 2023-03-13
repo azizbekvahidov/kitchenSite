@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\ContactController;
 use App\Http\Controllers\Api\EventController;
+use App\Http\Controllers\Api\HomePageSettingController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -22,6 +23,9 @@ Route::middleware('auth:sanctum')->group(function () {
     });
     Route::prefix('events')->group(function () {
         Route::get('',[EventController::class,'event']);
+    });
+    Route::prefix('home_page_settings')->group(function () {
+        Route::get('', [HomePageSettingController::class, 'homePage']);
     });
 });
 
