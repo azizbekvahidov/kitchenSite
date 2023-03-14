@@ -16,7 +16,7 @@ class HomePageResource extends JsonResource
     {
         return [
             'settings' => HomePageSettingResource::make($this['homePageSettings']),
-            'home_page' => HomeMediaResource::collection($this['home_page']),
+            'page' => HomeMediaResource::collection($this['home_page']),
             'images' => HomeMediaResource::collection($this['images'])
         ];
     }
