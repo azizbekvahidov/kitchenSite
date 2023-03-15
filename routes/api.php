@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\BranchController;
 use App\Http\Controllers\Api\ContactController;
 use App\Http\Controllers\Api\EventController;
 use App\Http\Controllers\Api\HomePageSettingController;
@@ -30,6 +31,9 @@ Route::middleware('auth:sanctum')->group(function () {
     });
     Route::prefix('menus')->group(function () {
         Route::get('{branch}', [MenuController::class, 'menu'])->whereNumber('menu');
+    });
+    Route::prefix('branches')->group(function () {
+        Route::get('', [BranchController::class, 'branch']);
     });
 });
 
