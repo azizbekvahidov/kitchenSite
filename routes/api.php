@@ -3,6 +3,7 @@
 use App\Http\Controllers\Api\ContactController;
 use App\Http\Controllers\Api\EventController;
 use App\Http\Controllers\Api\HomePageSettingController;
+use App\Http\Controllers\Api\MenuController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -26,6 +27,9 @@ Route::middleware('auth:sanctum')->group(function () {
     });
     Route::prefix('home_page_settings')->group(function () {
         Route::get('', [HomePageSettingController::class, 'homePage']);
+    });
+    Route::prefix('menus')->group(function () {
+        Route::get('{branch}', [MenuController::class, 'menu'])->whereNumber('menu');
     });
 });
 
